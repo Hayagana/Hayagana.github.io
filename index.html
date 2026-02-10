@@ -3,31 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe</title>
+    <title>Hello World</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: sans-serif; /* A basic font */
             margin: 0;
             padding: 20px;
         }
 
-        #game-board {
-            display: grid;
-            grid-template-columns: repeat(3, 100px); /* 3 columns of 100px each */
-            grid-gap: 5px; /* Space between cells */
+        header {
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            border-bottom: 1px solid #ccc; /* Subtle border */
         }
 
-        #cell {
-            width: 100px;
-            height: 100px;
-            border: 2px solid #ccc; /* Border around each cell */
-            text-align: center;
-            font-size: 40px;
-            cursor: pointer; /* Change cursor on hover */
-        }
-
-        #cell:hover {
-            background-color: #f0f0f0; /* Light gray on hover */
+        #main-content {
+            margin-top: 20px; /* Add some space below the header */
         }
 
         button {
@@ -50,41 +41,24 @@
 </head>
 <body>
 
-    <h1>Tic-Tac-Toe</h1>
+    <header>
+        <h1>Hello World</h1>
+        <button id="play-tic-tac-toe">Play Tic-Tac-Toe</button>
+    </header>
 
-    <div id="game-board">
-        <!-- Add your Tic-Tac-Toe board elements here (cells, buttons) -->
-        <div id="cell1"></div>
-        <div id="cell2"></div>
-        <div id="cell3"></div>
-        <div id="cell4"></div>
-        <div id="cell5"></div>
-        <div id="cell6"></div>
-        <div id="cell7"></div>
-        <div id="cell8"></div>
-        <div id="cell9"></div>
+    <div id="main-content">
+        <p>This is the main Hello World page.  Click the button above to play Tic-Tac-Toe.</p>
     </div>
 
-    <button id="back-to-hello">Back to Hello World</button>
-
     <script>
-        // JavaScript for Tic-Tac-Toe game logic (add your code here)
-
+        // JavaScript to handle the button click
         document.addEventListener('DOMContentLoaded', function() {
-            const cells = document.querySelectorAll('#cell'); // Get all the cell elements
-            const backToHelloButton = document.getElementById('back-to-hello');
+            const playTicTacToeButton = document.getElementById('play-tic-tac-toe');
 
-            cells.forEach(function(cell) {
-                cell.addEventListener('click', function() {
-                    // Add your cell click logic here (e.g., update the board)
-                    console.log('Cell clicked:', this); // Log which cell was clicked
-                });
-            });
-
-            if (backToHelloButton) { // Check if the button exists
-                backToHelloButton.addEventListener('click', function() {
-                    // Redirect back to the Hello World page
-                    window.location.href = 'index.html';
+            if (playTicTacToeButton) { // Check if the button exists
+                playTicTacToeButton.addEventListener('click', function() {
+                    // Redirect to the Tic-Tac-Toe page (replace with your actual link)
+                    window.location.href = 'tic_tac_toe.html'; // Link to your tic-tac-toe page
                 });
             }
         });
