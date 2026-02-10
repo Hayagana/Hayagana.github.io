@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: sans-serif; /* A basic font */
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            border-bottom: 1px solid #ccc; /* Subtle border */
+        }
+
+        #main-content {
+            margin-top: 20px; /* Add some space below the header */
+        }
+
+        button {
+            background-color: #4CAF50; /* Green button */
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; /* Make button take up space */
+            font-size: 16px;
+            cursor: pointer; /* Change cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        button:hover {
+            background-color: #3e8e41; /* Darker green on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hello World</h1>
+        <button id="play-tic-tac-toe">Play Tic-Tac-Toe</button>
+    </header>
+
+    <div id="main-content">
+        <p>This is the main Hello World page.  Click the button above to play Tic-Tac-Toe.</p>
+    </div>
+
+    <script>
+        // JavaScript to handle the button click
+        document.addEventListener('DOMContentLoaded', function() {
+            const playTicTacToeButton = document.getElementById('play-tic-tac-toe');
+
+            if (playTicTacToeButton) { // Check if the button exists
+                playTicTacToeButton.addEventListener('click', function() {
+                    // Redirect to the Tic-Tac-Toe page (replace with your actual link)
+                    window.location.href = 'tic_tac_toe.html'; // Link to your tic-tac-toe page
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
